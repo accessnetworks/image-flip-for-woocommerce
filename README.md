@@ -1,2 +1,2 @@
-# image-flip-for-woocommerce
-A simple plugin to offer image flipping for WooCommerce Product Detail Pages.
+# Image Flip for WooCommerce
+A simple plugin to offer image flipping for WooCommerce Categories.
