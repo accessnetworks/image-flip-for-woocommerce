@@ -60,8 +60,10 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 * @access public
 			 */
 			public function image_flip_styles() {
-				if ( apply_filters( 'image_flip_styles', true ) ) {
-					wp_enqueue_style( 'image-flip-styles', plugins_url( '/assets/css/image-flip.min.css', __FILE__ ), array(), '0.0.1', 'all' );
+				if( is_product_category() ) {
+					if ( apply_filters( 'image_flip_styles', true ) ) {
+						wp_enqueue_style( 'image-flip-styles', plugins_url( '/assets/css/image-flip.min.css', __FILE__ ), array(), '0.0.1', 'all' );
+					}
 				}
 			}
 
