@@ -73,15 +73,13 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 */
 			public function product_has_gallery( $classes ) {
 
-				if( is_product_category() ) {
-
 					global $product;
 
 					$post_type = get_post_type( get_the_ID() );
 
 					if ( ! is_admin() ) {
 
-						if ( 'product' === $post_type ) {
+						if ( 'product' === $post_type && is_product_category() ) {
 
 							$attachment_ids = $this->get_gallery_image_ids( $product );
 
@@ -93,7 +91,6 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 					return $classes;
 
-				}
 			}
 
 			/**
