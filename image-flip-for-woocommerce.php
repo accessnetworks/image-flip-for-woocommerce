@@ -72,23 +72,28 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 * @param mixed $classes Classes.
 			 */
 			public function product_has_gallery( $classes ) {
-				global $product;
 
-				$post_type = get_post_type( get_the_ID() );
+				if( is_product_category() ) {
 
-				if ( ! is_admin() ) {
+					global $product;
 
-					if ( 'product' === $post_type ) {
+					$post_type = get_post_type( get_the_ID() );
 
-						$attachment_ids = $this->get_gallery_image_ids( $product );
+					if ( ! is_admin() ) {
 
-						if ( $attachment_ids ) {
-							$classes[] = 'pif-has-gallery';
+						if ( 'product' === $post_type ) {
+
+							$attachment_ids = $this->get_gallery_image_ids( $product );
+
+							if ( $attachment_ids ) {
+								$classes[] = 'pif-has-gallery';
+							}
 						}
 					}
-				}
 
-				return $classes;
+					return $classes;
+
+				}
 			}
 
 			/**
@@ -98,27 +103,31 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 */
 			public function woocommerce_template_loop_second_product_thumbnail() {
 
-				global $product, $woocommerce;
+				if( is_product_category() ) {
 
-				$attachment_ids = $this->get_gallery_image_ids( $product );
+					global $product, $woocommerce;
 
-				if ( $attachment_ids ) {
-					$attachment_ids     = array_values( $attachment_ids );
-					$secondary_image_id = $attachment_ids['0'];
+					$attachment_ids = $this->get_gallery_image_ids( $product );
 
-					$secondary_image_alt   = get_post_meta( $secondary_image_id, '_wp_attachment_image_alt', true );
-					$secondary_image_title = get_the_title( $secondary_image_id );
+					if ( $attachment_ids ) {
+						$attachment_ids     = array_values( $attachment_ids );
+						$secondary_image_id = $attachment_ids['0'];
 
-					echo wp_get_attachment_image(
-						$secondary_image_id,
-						'shop_catalog',
-						'',
-						array(
-							'class' => 'secondary-image attachment-shop-catalog wp-post-image wp-post-image--secondary',
-							'alt'   => $secondary_image_alt,
-							'title' => $secondary_image_title,
-						)
-					);
+						$secondary_image_alt   = get_post_meta( $secondary_image_id, '_wp_attachment_image_alt', true );
+						$secondary_image_title = get_the_title( $secondary_image_id );
+
+						echo wp_get_attachment_image(
+							$secondary_image_id,
+							'shop_catalog',
+							'',
+							array(
+								'class' => 'secondary-image attachment-shop-catalog wp-post-image wp-post-image--secondary',
+								'alt'   => $secondary_image_alt,
+								'title' => $secondary_image_title,
+							)
+						);
+					}
+
 				}
 			}
 
@@ -130,14 +139,18 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 */
 			public function get_gallery_image_ids( $product ) {
 
-				if ( ! is_a( $product, 'WC_Product' ) ) {
-					return;
-				}
+				if( is_product_category() ) {
 
-				if ( is_callable( 'WC_Product::get_gallery_image_ids' ) ) {
-					return $product->get_gallery_image_ids();
-				} else {
-					return $product->get_gallery_attachment_ids();
+					if ( ! is_a( $product, 'WC_Product' ) ) {
+						return;
+					}
+
+					if ( is_callable( 'WC_Product::get_gallery_image_ids' ) ) {
+						return $product->get_gallery_image_ids();
+					} else {
+						return $product->get_gallery_attachment_ids();
+					}
+
 				}
 			}
 
