@@ -41,6 +41,7 @@ First of all check that the product you're checking has a gallery attached to it
 == Credits ==
 
 Based on plugin by jameskoster & gabriel-kaam! Thanks!
+Illustrations provided by undraw.co, thanks!
 
 == Changelog ==
 
