@@ -1,9 +1,9 @@
 === Image Flip For WooCommerce ===
-Contributors: accessnetworks, bhubbard, jameskoster, gabriel-kaam
+Contributors: accessnetworks, bhubbard
 Tags: woocommerce, ecommerce, product, images, photos, product photos, front and back
 Requires at least: 3.8
 Tested up to: 5.8.1
-Stable tag: 0.1.7
+Stable tag: 0.1.9
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -38,9 +38,9 @@ This is due to the secondary image being positioned absolutely. This is the clea
 First of all check that the product you're checking has a gallery attached to it.
 
 
-== Screenshots ==
+== Credits ==
 
-1. A flipped image.
+Based on plugin by jameskoster & gabriel-kaam! Thanks!
 
 == Changelog ==
 
