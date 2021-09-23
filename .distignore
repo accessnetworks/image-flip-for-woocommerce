@@ -4,6 +4,8 @@
 .distignore
 .editorconfig
 .eslintignore
+.github
+.wordpress-org
 .eslintrc
 .git
 .gitignore
