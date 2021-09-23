@@ -4,7 +4,7 @@
  * Plugin URI:      https://github.com/accessnetworks/image-flip-for-woocommerce
  * Description:     Adds a secondary image on product archives that is revealed on hover. Perfect for displaying front/back shots of clothing and other products.
  * Author:          Access Networks
- * Author URI:      https://www.accessca.com
+ * Author URI:      https://www.accessnetworks.com
  * Text Domain:     image-flip-for-woocommerce
  * Domain Path:     /languages
  * Version:         0.1.0
