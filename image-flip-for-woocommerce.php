@@ -7,7 +7,7 @@
  * Author URI:      https://www.accessnetworks.com
  * Text Domain:     image-flip-for-woocommerce
  * Domain Path:     /languages
- * Version:         0.1.0
+ * Version:         0.1.6
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  * Based on plugin by jameskoster (https://jameskoster.co.uk)
