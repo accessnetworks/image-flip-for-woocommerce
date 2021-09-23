@@ -15,7 +15,7 @@ A very simple plugin that adds a secondary product thumbnail on product archives
 
 This plugin is ideal if you'd like to display more than one image on product archives, and perfect if you want to display front and back images of clothing for example.
 
-Please feel free to contribute on <a href="https://github.com/jameskoster/woocommerce-product-image-flipper">github</a>.
+Please feel free to contribute on <a href="https://github.com/accessnetworks/image-flip-for-woocommerce">github</a>.
 
 == Installation ==
 
