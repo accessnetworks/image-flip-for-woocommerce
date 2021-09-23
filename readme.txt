@@ -2,10 +2,10 @@
 Contributors: accessnetworks, bhubbard, jameskoster, gabriel-kaam
 Tags: woocommerce, ecommerce, product, images, photos, product photos, front and back
 Requires at least: 3.8
-Tested up to: 5.0.0
-Stable tag: 0.1.6
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tested up to: 5.8.1
+Stable tag: 0.1.7
+License: GPLv3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Adds a secondary image on product archives that is revealed on hover. Perfect for displaying front/back shots of clothing and other products.
 
