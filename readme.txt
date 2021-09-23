@@ -1,5 +1,5 @@
 === WooCommerce Product Image Flipper ===
-Contributors: jameskoster, gabriel-kaam
+Contributors: accessnetworks, bhubbard, jameskoster, gabriel-kaam
 Tags: woocommerce, ecommerce, product, images, photos, product photos, front and back
 Requires at least: 3.8
 Tested up to: 5.0.0
